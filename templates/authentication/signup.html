@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Sign up</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <link rel="shortcut icon" type="image/png" href="{% static 'bus.png' %}" >
+    </head>
+    <body>
+        <h3>Sign up</h3>
+        <script src="" async defer></script>
+        <form action= "/signup" method = "POST">
+            {% csrf_token %}
+            <label for="">Username          </label>
+            <input type="text" id = "username" name = "username" placeholder="Enter your username" required>
+            <br>
+            <label for="">First Name        </label>
+            <input type="text" id = "firstname" name = "firstname" placeholder="Enter your first name" required>
+            <br>
+            <label for="">Last Name         </label>
+            <input type="text" id = "lastname" name = "lastname" placeholder="Enter your lastname">
+            <br>
+            <label for="">E-mail ID         </label>
+            <input type="text" id = "email" name = "email" placeholder="Enter your Email ID" required>
+            <br>
+            <label for="">Password          </label>
+            <input type="text" id = "pass1" name = "pass1" placeholder="Enter Password" required>
+            <br>
+            <label for="">Confirm Password  </label>
+            <input type="text" id = "pass2" name = "pass2" placeholder="Confirm Password" required>
+            <br><br>
+            <button type = 'submit'>            Submit</button>
+        </form>
+    </body>
+</html>
